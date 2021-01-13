@@ -87,6 +87,21 @@ function setup(){
  
 }
 
+
+function keyPressed(){
+    if(key==' '){
+        setTimeout(xyz,50); 
+    }
+}
+
+
+function mouseRealeased(){
+    
+}
+function xyz(){
+    sling.fly();
+}
+
 function draw(){
     background("darkBlue");
     Engine.update(engine);
@@ -171,14 +186,12 @@ function mouseDragged(){
     hexagon.body.position.y=mouseY
 }
 
-    function mouseReleased(){
-        sling.fly();
-    }
+    /**/
+    
 
-    function keyPressed(){
-        if(keyCode===32){
+    function keyReleased(){
+        if(key=='a'){
           Matter.Body.setPosition(hexagon.body,{x:140,y:560});
           sling.attach(hexagon.body);
         }
       }
-
